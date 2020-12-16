@@ -53,10 +53,6 @@ public class ClientHandler {
     private void doAuth() throws IOException {
         sendMessage("Awaiting credentials (120 secs). Sample [-auth login password]");
         socket.setSoTimeout(timeout);
-            /**
-             * -auth login password
-             * sample: -auth l1 p1
-             */
             while (true) {
                 String mayBeCredentials = in.readUTF();
                 if (mayBeCredentials.startsWith("-auth")) {
